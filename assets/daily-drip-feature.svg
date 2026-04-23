@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="500" viewBox="0 0 1024 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1e"/>
+      <stop offset="100%" stop-color="#0f1a33"/>
+    </linearGradient>
+    <linearGradient id="drop" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="500" fill="url(#bg)"/>
+
+  <!-- Subtle background glow -->
+  <circle cx="200" cy="250" r="250" fill="#3b82f6" opacity="0.04"/>
+  <circle cx="800" cy="250" r="200" fill="#3b82f6" opacity="0.03"/>
+
+  <!-- Decorative dots pattern -->
+  <g opacity="0.06" fill="#60a5fa">
+    <circle cx="50" cy="50" r="2"/>
+    <circle cx="100" cy="80" r="2"/>
+    <circle cx="150" cy="40" r="2"/>
+    <circle cx="900" cy="60" r="2"/>
+    <circle cx="950" cy="100" r="2"/>
+    <circle cx="870" cy="30" r="2"/>
+    <circle cx="80" cy="420" r="2"/>
+    <circle cx="130" cy="460" r="2"/>
+    <circle cx="920" cy="440" r="2"/>
+    <circle cx="970" cy="400" r="2"/>
+  </g>
+
+  <!-- Small droplet icon on left side -->
+  <g transform="translate(140, 120)" filter="url(#glow)">
+    <path d="M60 20
+             C60 20, 15 100, 15 135
+             C15 160, 35 180, 60 180
+             C85 180, 105 160, 105 135
+             C105 100, 60 20, 60 20Z"
+          fill="url(#drop)" opacity="0.9"/>
+    <!-- Shine -->
+    <ellipse cx="45" cy="120" rx="12" ry="18" fill="#ffffff" opacity="0.15" transform="rotate(-10, 45, 120)"/>
+    <!-- Condition dots -->
+    <circle cx="42" cy="158" r="5" fill="#22c55e"/>
+    <circle cx="60" cy="162" r="5" fill="#eab308"/>
+    <circle cx="78" cy="158" r="5" fill="#ef4444"/>
+  </g>
+
+  <!-- Sun accent -->
+  <g transform="translate(105, 115)">
+    <circle cx="0" cy="0" r="18" fill="url(#sun)" opacity="0.85"/>
+    <g stroke="#fbbf24" stroke-width="2" stroke-linecap="round" opacity="0.6">
+      <line x1="0" y1="-25" x2="0" y2="-32"/>
+      <line x1="0" y1="25" x2="0" y2="32"/>
+      <line x1="-25" y1="0" x2="-32" y2="0"/>
+      <line x1="25" y1="0" x2="32" y2="0"/>
+      <line x1="-18" y1="-18" x2="-23" y2="-23"/>
+      <line x1="18" y1="18" x2="23" y2="23"/>
+      <line x1="-18" y1="18" x2="-23" y2="23"/>
+      <line x1="18" y1="-18" x2="23" y2="-23"/>
+    </g>
+  </g>
+
+  <!-- App name -->
+  <text x="310" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="64" font-weight="800" fill="#f1f5f9" letter-spacing="-1">The Daily Drip</text>
+
+  <!-- Tagline -->
+  <text x="310" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="500" fill="#60a5fa" opacity="0.9">Know before you go.</text>
+
+  <!-- Activity icons row -->
+  <g transform="translate(310, 290)">
+    <!-- Activity pills -->
+    <g>
+      <rect x="0" y="0" width="90" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" font-size="16">🚁</text>
+      <text x="42" y="24" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Drone</text>
+    </g>
+    <g transform="translate(100, 0)">
+      <rect x="0" y="0" width="82" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" font-size="16">🚴</text>
+      <text x="42" y="24" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Bike</text>
+    </g>
+    <g transform="translate(192, 0)">
+      <rect x="0" y="0" width="82" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" font-size="16">🥾</text>
+      <text x="42" y="24" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Hike</text>
+    </g>
+    <g transform="translate(284, 0)">
+      <rect x="0" y="0" width="82" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" font-size="16">🎣</text>
+      <text x="42" y="24" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Fish</text>
+    </g>
+    <g transform="translate(376, 0)">
+      <rect x="0" y="0" width="90" height="36" rx="18" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="20" y="24" font-size="16">📸</text>
+      <text x="42" y="24" font-family="-apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Photo</text>
+    </g>
+  </g>
+
+  <!-- Color score bar preview -->
+  <g transform="translate(310, 350)">
+    <rect x="0" y="0" width="80" height="48" rx="10" fill="#16a34a"/>
+    <text x="40" y="20" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#ffffffbb" text-anchor="middle">WIND</text>
+    <text x="40" y="40" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">8 mph</text>
+
+    <rect x="88" y="0" width="80" height="48" rx="10" fill="#22c55e"/>
+    <text x="128" y="20" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#ffffffbb" text-anchor="middle">GUST</text>
+    <text x="128" y="40" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">12 mph</text>
+
+    <rect x="176" y="0" width="80" height="48" rx="10" fill="#eab308"/>
+    <text x="216" y="20" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#1a1a1abb" text-anchor="middle">PRECIP</text>
+    <text x="216" y="40" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#1a1a1a" text-anchor="middle">35%</text>
+
+    <rect x="264" y="0" width="80" height="48" rx="10" fill="#16a34a"/>
+    <text x="304" y="20" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#ffffffbb" text-anchor="middle">VISIBILITY</text>
+    <text x="304" y="40" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">10 mi</text>
+
+    <rect x="352" y="0" width="80" height="48" rx="10" fill="#22c55e"/>
+    <text x="392" y="20" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#ffffffbb" text-anchor="middle">TEMP</text>
+    <text x="392" y="40" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">72°F</text>
+  </g>
+
+  <!-- Bottom accent line -->
+  <rect x="0" y="494" width="1024" height="6" fill="#3b82f6" opacity="0.4"/>
+</svg>
