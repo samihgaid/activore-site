@@ -8,7 +8,7 @@
   // here. It looks like "xnnvkpdz" (an 8-char string).
   // Until then, the waitlist will fall back to localStorage so submissions
   // are still captured locally for testing.
-  const FORMSPREE_ID = ''; // e.g. 'xnnvkpdz'
+  const FORMSPREE_ID = 'mgorqnzl';
   // ======================================================================
 
   // Year in footer
