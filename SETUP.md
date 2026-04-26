@@ -35,31 +35,17 @@ Right now the waitlist form falls back to `localStorage`. Once you add a Formspr
 
 ---
 
-## 2. Cloudflare Web Analytics (5 min)
+## 2. Cloudflare Web Analytics — already done ✅
 
-Privacy-friendly analytics, no cookies, no banner needed.
+Cloudflare auto-injects the analytics JS for sites on their network. No code changes needed.
 
-1. In Cloudflare dashboard → left sidebar → **Analytics & logs** → **Web Analytics**
-2. Click **Add a site** → **Manual installation** (since it's a Worker, not a CF-proxied origin)
-3. Enter hostname: `activore.app`
-4. Cloudflare gives you a snippet that looks like:
-   ```html
-   <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-     data-cf-beacon='{"token": "abc123def456..."}'></script>
-   ```
-5. Copy just the **token value** (the `abc123def456...` part — about 32 characters)
-6. In the repo, do a global find-and-replace for `REPLACE_WITH_YOUR_TOKEN`:
-   - `index.html`
-   - `privacy.html`
-   - `terms.html`
-   Replace it with your actual token.
-7. Commit, push:
-   ```bash
-   git add .
-   git commit -m "Add Cloudflare Analytics token"
-   git push
-   ```
-8. Wait ~5 min, then check the Web Analytics dashboard. Visits will start showing.
+To view your data:
+- Cloudflare dashboard → **Analytics & logs** → **Web Analytics**
+- Click `activore.app` to see visits, page views, Core Web Vitals, geography, browsers, etc.
+
+To manage privacy settings:
+- **Manage site** → choose between "Enable" (global) or "Enable, excluding EU" (privacy-extra)
+- Both options are GDPR-safe since CF Web Analytics is cookieless and privacy-first.
 
 ---
 
