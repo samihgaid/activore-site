@@ -64,6 +64,7 @@
       const input = form.querySelector('input[type="email"]');
       const submitBtn = form.querySelector('button[type="submit"]');
       const email = (input?.value || '').trim();
+      const turnstileToken = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
 
       msg.classList.remove('error');
 
@@ -71,6 +72,12 @@
         msg.textContent = 'Please enter a valid email address.';
         msg.classList.add('error');
         input?.focus();
+        return;
+      }
+
+      if (!turnstileToken) {
+        msg.textContent = 'Please complete the verification challenge before submitting.';
+        msg.classList.add('error');
         return;
       }
 
@@ -96,6 +103,7 @@
               email,
               source: 'activore.app waitlist',
               userAgent: navigator.userAgent,
+              'cf-turnstile-response': turnstileToken,
             }),
           });
           success = res.ok;
@@ -116,6 +124,9 @@
 
       if (success) {
         form.reset();
+        if (window.turnstile) {
+          try { window.turnstile.reset(); } catch (_) { /* ignore */ }
+        }
         msg.textContent = "You're in. We'll email you the moment each app drops.";
       } else {
         msg.textContent = "Hmm, something went wrong. Please try again, or email info@activore.app.";

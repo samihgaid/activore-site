@@ -49,6 +49,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Cloudflare Turnstile (anti-bot for waitlist form) -->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -203,16 +206,22 @@
         </p>
 
         <form class="waitlist-form" id="waitlistForm" novalidate>
-          <label class="visually-hidden" for="email">Email address</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="you@email.com"
-            autocomplete="email"
-            required
-          />
-          <button type="submit" class="btn btn-primary">Notify me</button>
+          <div class="waitlist-row">
+            <label class="visually-hidden" for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="you@email.com"
+              autocomplete="email"
+              required
+            />
+            <button type="submit" class="btn btn-primary">Notify me</button>
+          </div>
+          <div class="cf-turnstile waitlist-turnstile"
+               data-sitekey="0x4AAAAAADDck32EZZ3Rfv9V"
+               data-theme="dark"
+               data-size="flexible"></div>
         </form>
         <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
 

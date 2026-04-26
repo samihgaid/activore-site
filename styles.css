@@ -477,8 +477,18 @@ section {
   max-width: 520px;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.waitlist-row {
+  display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+.waitlist-turnstile {
+  display: flex;
+  justify-content: center;
+  min-height: 65px;
 }
 .waitlist-form input[type="email"] {
   flex: 1;
