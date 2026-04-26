@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0F0F17"/>
+      <stop offset="100%" stop-color="#0A0A0F"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="rgba(139,92,246,0.45)"/>
+      <stop offset="100%" stop-color="rgba(139,92,246,0)"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="85%" cy="80%" r="55%">
+      <stop offset="0%" stop-color="rgba(251,113,133,0.38)"/>
+      <stop offset="100%" stop-color="rgba(251,113,133,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(80, 80)">
+    <rect width="56" height="56" rx="16" fill="url(#brand)"/>
+    <rect x="16" y="16" width="24" height="24" rx="6" fill="#0A0A0F"/>
+  </g>
+  <text x="156" y="120" font-family="Space Grotesk, system-ui, sans-serif" font-weight="700" font-size="36" fill="#FAFAFA" letter-spacing="-1">activore</text>
+
+  <!-- Status chip -->
+  <g transform="translate(80, 200)">
+    <rect width="320" height="44" rx="22" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)"/>
+    <circle cx="22" cy="22" r="5" fill="#A7F3D0"/>
+    <text x="42" y="29" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#A6AAB8">Coming soon — both apps in testing</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="340" font-family="Space Grotesk, system-ui, sans-serif" font-weight="700" font-size="78" fill="#FAFAFA" letter-spacing="-2">Apps for people</text>
+  <text x="80" y="430" font-family="Space Grotesk, system-ui, sans-serif" font-weight="700" font-size="78" letter-spacing="-2">
+    <tspan fill="#FAFAFA">who love </tspan><tspan fill="url(#brand)">doing things</tspan><tspan fill="#FAFAFA">.</tspan>
+  </text>
+
+  <!-- URL -->
+  <text x="80" y="540" font-family="Inter, system-ui, sans-serif" font-weight="500" font-size="24" fill="#A6AAB8">activore.app</text>
+
+  <!-- Bottom-right meta line -->
+  <g transform="translate(1120, 550)" text-anchor="end">
+    <text font-family="Inter, system-ui, sans-serif" font-size="16" fill="#6B7080">The Daily Drip · Sound Meter</text>
+  </g>
+</svg>
